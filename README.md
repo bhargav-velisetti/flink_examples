@@ -2,6 +2,9 @@
  Flink Version = 1.15.0   
  SCALA Version = 2.12   
  JAVA Version = 1.8   
+ IDE = IntelliJ IDEA    
+ Build Tool = Maven 3.x     
+ 
 
 
 Streaming Examples : 
