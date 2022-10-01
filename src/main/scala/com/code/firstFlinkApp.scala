@@ -1,4 +1,4 @@
-package com.code
+package main.scala.com.code
 
 import org.apache.flink.table.api.{EnvironmentSettings, TableEnvironment, TableResult}
 import scala.collection.convert.ImplicitConversions.`iterator asScala`

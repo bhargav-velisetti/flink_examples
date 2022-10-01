@@ -1,4 +1,4 @@
-package com.code
+package main.scala.com.code
 
 import org.apache.flink.table.api.{DataTypes, EnvironmentSettings, Schema, Table, TableDescriptor, TableEnvironment, TableResult}
 

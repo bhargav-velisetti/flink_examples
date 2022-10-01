@@ -1,6 +1,6 @@
-package com.code
+package main.scala.com.code
 
-import com.code.secondFlinkApp.schema
+
 import org.apache.flink.table.api.{DataTypes, EnvironmentSettings, Schema, TableDescriptor, TableEnvironment, TableResult}
 
 object readKafkaStream01 extends App {
