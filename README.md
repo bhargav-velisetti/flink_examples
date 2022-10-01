@@ -8,6 +8,7 @@ Streaming Examples :
 
   Redaing from Kafka  
   Event Based and Processed Based Windowing   
+  Fixed Size (Tumble) / Sliding Windows    
 
 Batch Processing Examples : 
 
