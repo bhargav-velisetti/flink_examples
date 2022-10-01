@@ -2,8 +2,6 @@ package com.code
 
 import org.apache.flink.table.api.{EnvironmentSettings, TableEnvironment, TableResult}
 import scala.collection.convert.ImplicitConversions.`iterator asScala`
-// import org.apache.flink.table.api._
-
 
 object firstFlinkApp extends App {
 

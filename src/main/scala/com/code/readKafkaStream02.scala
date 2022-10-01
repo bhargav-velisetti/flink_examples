@@ -1,7 +1,8 @@
 package com.code
 
 import org.apache.flink.configuration.Configuration
-import org.apache.flink.table.api.{DataTypes, EnvironmentSettings, Schema, Table, TableDescriptor, TableEnvironment}
+import org.apache.flink.table.api.{DataTypes, EnvironmentSettings, Schema, Table, TableDescriptor, TableEnvironment, Tumble, TumbleWithSize}
+import org.apache.flink.table.api.Expressions.{$, lit}
 
 object readKafkaStream02 extends App {
 
@@ -16,6 +17,7 @@ object readKafkaStream02 extends App {
 
   val tEnv : TableEnvironment = TableEnvironment.create(settings);
 
+
   val tEnv_config = tEnv.getConfig();
 
   tEnv_config.set("table.exec.source.idle-timeout", "1000 ms");
@@ -25,6 +27,8 @@ object readKafkaStream02 extends App {
   tEnv_config.set("table.exec.mini-batch.allow-latency", "1000 ms");
 
   // tEnv.config.configuration.setString("table.exec.source.idle-timeout", "5000 ms")
+
+  //Example for Event time based windowing
 
   val schema = Schema.newBuilder()
   schema.column("id", DataTypes.INT())
@@ -43,6 +47,8 @@ object readKafkaStream02 extends App {
     .build()
   )
 
+
+  // Mixing the Table API with SQL
   tEnv.executeSql(
     """select type, sum(amount) as sum_ammount , window_start , window_end FROM TABLE
       |(
@@ -50,6 +56,16 @@ object readKafkaStream02 extends App {
       |) GROUP BY type, window_start, window_end ;
       |""".stripMargin ).print()
 
+  // Creating the table object from Table Env
+  val Table1 : Table = tEnv.from("kafka_stream_input");
+
+  // Creating the Window Results with Table API syntax
+  val Table2  =  Table1
+    .window(Tumble.over(lit(10).minutes()).on($("trx_timestamp")).as("w"))
+    .groupBy($("type"),$("w"))
+    .select($("type"),  $("amount").sum().as("sum_amount"), $("w").start().as("window_start"), $("w").end().as("window_end") ).execute().print()
+
+ // Creating the Window Results with SQL API Syntax
 
   val temp_table : Table  = tEnv.sqlQuery(
   """select  type, sum(amount) as sum_ammount , window_start , window_end from TABLE
@@ -61,9 +77,5 @@ object readKafkaStream02 extends App {
   tEnv.registerTable("temp_table",temp_table)
 
   temp_table.execute().print()
-
-
-
-
 
 }
