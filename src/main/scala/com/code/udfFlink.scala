@@ -1,6 +1,6 @@
 package com.code
 
-import com.code.secondFlinkApp.tEnv
+
 import org.apache.flink.table.api.{DataTypes, EnvironmentSettings, Schema, Table, TableDescriptor, TableEnvironment}
 import org.apache.flink.table.functions.ScalarFunction
 

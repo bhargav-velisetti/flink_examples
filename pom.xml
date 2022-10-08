@@ -102,6 +102,27 @@
             <version>1.15.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.lihaoyi/upickle -->
+        <dependency>
+            <groupId>com.lihaoyi</groupId>
+            <artifactId>upickle_2.12</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.lihaoyi/os-lib -->
+        <dependency>
+            <groupId>com.lihaoyi</groupId>
+            <artifactId>os-lib_2.12</artifactId>
+            <version>0.8.1</version>
+        </dependency>
+
+
 
     </dependencies>
 

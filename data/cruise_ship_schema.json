@@ -1,0 +1,11 @@
+{
+  "Ship_name" : "STRING",
+  "Cruise_line" : "STRING",
+  "Age" : "INTEGER",
+  "Tonnage" : "FLOAT",
+  "passengers" : "FLOAT",
+  "length" : "FLOAT",
+  "cabins" : "FLOAT",
+  "passenger_density" : "FLOAT",
+  "crew" : "FLOAT"
+}
