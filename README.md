@@ -16,6 +16,9 @@ Streaming Examples :
 Batch Processing Examples : 
 
   Creating Table/TableResults  
-  Read and Write to local filesystem.   
+  Read and Write to local filesystem.      
+  
+  
+Added building the Flink schema from Json file     
 
 
