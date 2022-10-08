@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f63bb788-62ff-4ee9-b1f2-1f8015720ce4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/cruise_ship_schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/code/buildSchema.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/code/schemaExample01.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/code/testjson.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/code/udfFlink.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/code/udfFlink.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +49,13 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.testjson">
-    <configuration name="firstFlinkApp" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.code.firstFlinkApp" />
+  <component name="RunManager" selected="Application.buildJsonSchema">
+    <configuration name="buildJsonSchema" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="scala.com.code.buildJsonSchema" />
       <module name="apacheFlinkExamples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.code.*" />
+          <option name="PATTERN" value="scala.com.code.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,20 +154,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.buildJsonSchema" />
       <item itemvalue="Application.testjson" />
       <item itemvalue="Application.schemaExample01" />
       <item itemvalue="Application.readKafkaStream03" />
       <item itemvalue="Application.readKafkaStream02" />
-      <item itemvalue="Application.firstFlinkApp" />
       <item itemvalue="Maven.apacheFlinkExamples" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.buildJsonSchema" />
         <item itemvalue="Application.testjson" />
         <item itemvalue="Application.schemaExample01" />
         <item itemvalue="Application.readKafkaStream03" />
         <item itemvalue="Application.readKafkaStream02" />
-        <item itemvalue="Application.firstFlinkApp" />
       </list>
     </recent_temporary>
   </component>

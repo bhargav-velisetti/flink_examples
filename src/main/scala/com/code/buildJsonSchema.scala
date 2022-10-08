@@ -4,7 +4,7 @@ import main.scala.com.code.buildSchema
 import main.scala.com.code.secondFlinkApp.{schema, tEnv}
 import org.apache.flink.table.api.{EnvironmentSettings, Schema, TableDescriptor, TableEnvironment}
 
-object testjson extends  App {
+object buildJsonSchema extends  App {
 
   val input_schema : Schema =  buildSchema(os.pwd/"data"/"cruise_ship_schema.json" ).apply()
 
